@@ -26,6 +26,7 @@
       </div>
     </div>
 
+    <Youtube />
     <!-- Hero -->
     <div class="bg-gray-100 py-16">
       <div
@@ -54,41 +55,13 @@
         </div>
       </div>
     </div>
-
-    <!-- Features -->
-    <div class="bg-gray-200 py-16">
-      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-4">Supervised Learning</h3>
-          <p class="text-gray-600">
-            Supervised learning is a type of machine learning where the algorithm learns
-            from labeled data, where the input and output data are provided.
-          </p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-4">Unsupervised Learning</h3>
-          <p class="text-gray-600">
-            Unsupervised learning is a type of machine learning where the algorithm learns
-            from unlabeled data, where the input data is provided without the
-            corresponding output.
-          </p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-xl font-bold mb-4">Reinforcement Learning</h3>
-          <p class="text-gray-600">
-            Reinforcement learning is a type of machine learning where the algorithm
-            learns through trial and error, by receiving feedback in the form of rewards
-            or punishments.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script setup>
 const auth = useSupabaseAuthClient();
 const user = useSupabaseUser();
+const client = useSupabaseClient();
 const router = useRouter();
 const success = ref("");
 const errMsg = ref("");
